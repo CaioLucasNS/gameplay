@@ -1,3 +1,4 @@
+import { StatusBar } from 'react-native';
 import { useFonts } from 'expo-font';
 import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhani';
@@ -14,10 +15,19 @@ export default function App() {
     Rajdhani_700Bold
   });
 
-  if(!fontsLoaded) {
+  if (!fontsLoaded) {
     // AppLoading segura a tela de splash
     return <AppLoading />;
   };
 
-  return <SignIn />;
+  return (
+    <>
+      <StatusBar
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+      <SignIn />
+    </>
+  );
 }
