@@ -5,6 +5,7 @@ import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhan
 import AppLoading from 'expo-app-loading';
 
 import { SignIn } from './src/screens/SignIn';
+import { Background } from './src/components/Background/Background';
 
 export default function App() {
   // carregamento das fontes
@@ -15,19 +16,17 @@ export default function App() {
     Rajdhani_700Bold
   });
 
-  if (!fontsLoaded) {
-    // AppLoading segura a tela de splash
-    return <AppLoading />;
-  };
+  // AppLoading segura a tela de splash
+  if (!fontsLoaded) return <AppLoading />;
 
   return (
-    <>
+    <Background>
       <StatusBar
         barStyle="light-content"
         backgroundColor="transparent"
         translucent
       />
       <SignIn />
-    </>
+    </Background>
   );
 }
