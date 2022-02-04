@@ -4,8 +4,8 @@ import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhani';
 import AppLoading from 'expo-app-loading';
 
-import { Home } from './src/screens/Home';
 import { Background } from './src/components/Background/Background';
+import { Routes } from './src/routes';
 
 export default function App() {
   // carregamento das fontes
@@ -26,7 +26,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <Home />
+      <Routes />
     </Background>
   );
 }
