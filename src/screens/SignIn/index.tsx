@@ -7,11 +7,11 @@ import { ButtonIcon } from '../../components/ButtonIcon';
 
 import IllustrationImg from '../../assets/illustration.png';
 import { styles } from './styles';
-import { useNavigation, NavigationProp } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 
 export function SignIn() {
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>(); //TODO: tipagem 
 
   function handleSignIn() {
     navigation.navigate('Home');
@@ -19,9 +19,9 @@ export function SignIn() {
 
   return (
     <View style={styles.container}>
-      <Image 
-        source={IllustrationImg} 
-        style={styles.image} 
+      <Image
+        source={IllustrationImg}
+        style={styles.image}
         resizeMode="stretch"
       />
 
@@ -37,7 +37,7 @@ export function SignIn() {
           favoritos com seus amigos
         </Text>
 
-        <ButtonIcon 
+        <ButtonIcon
           title="Entrar com o Discord"
           onPress={handleSignIn}
         />

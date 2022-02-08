@@ -7,22 +7,22 @@ import { SignIn } from '../screens/SignIn';
 const { Navigator, Screen } = createNativeStackNavigator();
 
 export function AuthRoutes() {
-    return (
-        <Navigator
-            initialRouteName='SignIn'
-            screenOptions={{
-                headerShown: false,
-                contentStyle: { backgroundColor: 'transparent' } // permite o uso do bg personalizado
-            }}
-        >
-            <Screen
-                name='SignIn'
-                component={SignIn}
-            />
-            <Screen
-                name='Home'
-                component={Home}
-            />
-        </Navigator>
-    )
+  return (
+    <Navigator
+      initialRouteName='SignIn'
+      screenOptions={{
+        headerShown: false,
+        contentStyle: { backgroundColor: 'transparent' } // permite o uso do bg personalizado
+      }}
+    >
+      <Screen
+        name='SignIn'
+        component={SignIn}
+      />
+      <Screen
+        name='Home'
+        component={Home}
+      />
+    </Navigator>
+  )
 }
